@@ -16,7 +16,7 @@ export function RecommendedMovieDisplay() {
   // copied from https://stackoverflow.com/questions/53416529/react-import-csv-file-and-parse
   useEffect(() => {
     async function getData() {
-        const response = await fetch('/final_recs.csv')
+        const response = await fetch('/final_recs1.csv')
         const reader = response.body.getReader()
         const result = await reader.read() // raw array
         const decoder = new TextDecoder('utf-8')
