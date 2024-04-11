@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import { Text, Button, VStack } from "@chakra-ui/react";
+import { Text, Button, VStack, Select } from "@chakra-ui/react";
 import Papa from 'papaparse';
-import Select from 'react-select';
 
 export function RecommendedMovieDisplay() {
   const [movies, setMovies] = useState([]);
@@ -29,13 +28,16 @@ export function RecommendedMovieDisplay() {
     getData()
   }, []) // [] means just do this once, after initial render
 
-  const options = movies.map((movie, index) => ({value: index, label: movie['movie name']}))
-
+  
   return (
     <VStack>
         <Button onClick={() => {handleRecommend(movies[Math.floor(Math.random() * movies.length)]['movie name'])}}>Get Recommendation for Random Movie</Button>
         <Text>Or</Text>
-        <div style={{ width: '100%' }}><Select onChange={(selectedOption) => setSelectedMovie(selectedOption.label)} placeholder='Choose movie' options={options} /></div>
+        <Select onChange={(event) => {setSelectedMovie(event.target.value)}} placeholder='Choose movie'>
+            {movies.map((movie, index) => { 
+                return <option key={index} value={movie['movie name']}>{movie['movie name']}</option>
+            })}
+        </Select>
         <Button onClick={() => {handleRecommend(selectedMovie)}}>Get Recommendation</Button>
         <Text>Recommendation for</Text>
         <Text>{beforeMovie}</Text>
