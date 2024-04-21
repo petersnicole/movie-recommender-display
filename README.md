@@ -1,6 +1,6 @@
 ## Movie Recommender Display
 
-Presents the results of a 1-to-1 mapping of movies to recommendations for those who enjoyed them.
+Presents the results of a 1-to-1 mapping of movies to recommendations for those who enjoyed them. Results are populated from the `final_recs1.csv` which was produced by the AI model in `project_updated_2.ipynb`.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
