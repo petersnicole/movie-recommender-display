@@ -6,5 +6,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Run with `npm start` in the project directory, and go to [http://localhost:3000](http://localhost:3000) in your browser.
 
-![PNG image](https://github.com/petersnicole/movie-recommender-display/assets/63528753/c7ca2941-5d8c-45ef-aeaa-28487c783386)
-
+![Screenshot 2024-04-21 at 12 32 44 PM](https://github.com/petersnicole/movie-recommender-display/assets/63528753/ff353073-5240-4fe5-9ce9-34032fe3b374)
